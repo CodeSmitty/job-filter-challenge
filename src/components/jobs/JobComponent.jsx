@@ -1,15 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./jobComponent.css";
 import FilterLists from "../filterLists/filterLists";
 
-const JobComponent = ({ jobData, handleClick, index}) => {
- 
-
+const JobComponent = ({ jobData, handleClick, index }) => {
   const languages = jobData.languages.map((language) => (
-     <FilterLists clicked={()=>handleClick(language)}  >{language}</FilterLists>
+    <FilterLists value={jobData.language} clicked={() => handleClick(language)}>
+      {language}
+    </FilterLists>
   ));
-  const tools = jobData.tools.map((tool) =>  <FilterLists clicked={()=>handleClick(tool)}  >{tool}</FilterLists>);
-
+  const tools = jobData.tools.map((tool) => (
+    <FilterLists value={jobData.tool} clicked={() => handleClick(tool)}>
+      {tool}
+    </FilterLists>
+  ));
 
   return (
     <div
@@ -27,22 +30,25 @@ const JobComponent = ({ jobData, handleClick, index}) => {
         </div>
         <div className="job-info-container">
           <div className="job-title-and-company">
-            <span 
+            <span
               className={
                 jobData.featured || jobData.new ? "featured-or-new" : null
               }
             >
-              <p className="company-title" >
-                {jobData.company}
-              </p>
-              {jobData.new ? <span className="newJob"><p >New!</p> </span>: null}
+              <p className="company-title">{jobData.company}</p>
+              {jobData.new ? (
+                <span className="newJob">
+                  <p>New!</p>{" "}
+                </span>
+              ) : null}
               {jobData.featured ? (
-                <span className="featuredJob"><p >Featured</p></span>
+                <span className="featuredJob">
+                  <p>Featured</p>
+                </span>
               ) : null}
             </span>
-           
           </div>
-           <h4 className="job-position">{jobData.position}</h4>
+          <h4 className="job-position">{jobData.position}</h4>
           <div className="job-postedAt-information">
             <p className="info-data">{jobData.postedAt}</p>
             <span className="info-data">*</span>
@@ -53,10 +59,16 @@ const JobComponent = ({ jobData, handleClick, index}) => {
         </div>
       </div>
       <div className="filter-tablets-container">
-        <FilterLists clicked={() => handleClick(jobData.role)}>
+        <FilterLists
+          value={jobData.role}
+          clicked={() => handleClick(jobData.role)}
+        >
           {jobData.role}
         </FilterLists>
-        <FilterLists clicked={() => handleClick(jobData.level)}>
+        <FilterLists
+          value={jobData.level}
+          clicked={() => handleClick(jobData.level)}
+        >
           {jobData.level}
         </FilterLists>
         {languages}
@@ -66,4 +78,3 @@ const JobComponent = ({ jobData, handleClick, index}) => {
   );
 };
 export default JobComponent;
-

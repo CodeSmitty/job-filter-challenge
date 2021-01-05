@@ -12,17 +12,16 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.filter-home{
-    width:80%;
-    position: relative;
-    margin:0 auto;
-    top:175px;
+.filter-home {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  top: 175px;
 }
 
-.jobs-container{
+.jobs-container {
   margin-top: 100px;
 }
-
 
 .App-header {
   background-color: #282c34;

@@ -15,37 +15,35 @@
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 7px 10px 0 hsla(180, 8%, 52%, 0.548);
-  
 }
 
-.featured-or-new{
+.featured-or-new {
   position: relative;
-  margin:auto;
-  display:flex;
-  flex-flow:row nowrap;
-  
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.featuredJob{
-  margin:0 10px;
+.featuredJob {
+  margin: 0 10px;
   font-size: 15px;
-  text-align:center;
+  text-align: center;
   font-weight: 500;
-  padding:5px;
+  padding: 5px;
   background-color: hsl(180, 14%, 20%);
   border-radius: 15px;
-  color:white;
+  color: white;
 }
 
-.newJob{
-  margin:0 10px;
+.newJob {
+  margin: 0 10px;
   font-size: 15px;
-  text-align:center;
+  text-align: center;
   font-weight: 500;
-  padding:5px;
+  padding: 5px;
   background-color: hsl(180, 39%, 40%);
   border-radius: 15px;
-  color:white;
+  color: white;
 }
 
 .img-and-jobs-container {
@@ -59,8 +57,7 @@
 }
 
 .job-title-and-company {
- padding:5px 0; 
- 
+  padding: 5px 0;
 }
 
 .job-postedAt-information {
@@ -71,7 +68,7 @@
 .company-title {
   color: hsl(180, 39%, 40%);
   font-weight: 600;
-  padding:5px 0;
+  padding: 5px 0;
 }
 
 .job-position {
@@ -87,7 +84,7 @@
 .info-data {
   padding-right: 10px;
   font-size: 12px;
-  font-weight:500;
+  font-weight: 500;
   color: hsl(180, 8%, 52%);
 }
 
