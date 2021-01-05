@@ -1,4 +1,13 @@
 
+.blank-style{
+    background-color: #5ba4a4;
+}
+
+.header{
+    height:200px;
+    background-image: url("../../images/bg-header-desktop.svg");
+   background-size: cover;
+}
 
 .header-container{
     top:0;
@@ -8,8 +17,3 @@
     background-color: #5ba4a4;
 }
 
-.header{
-    height:200px;
-    background-image: url("../../images/bg-header-desktop.svg");
-   background-size: cover;
-}
