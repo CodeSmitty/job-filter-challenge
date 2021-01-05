@@ -3,18 +3,26 @@
 - Dark Grayish Cyan: hsl(180, 8%, 52%)
 - Very Dark Grayish Cyan: hsl(180, 14%, 20%) */
 
-.tag-search-container {
+.tag-search-container{
   margin: 0 auto;
-  padding: 5px;
+  padding: 5px 10px;
   background-color: white;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
   border-radius: 5px;
   position: relative;
   box-shadow: 0px 7px 10px 0 hsla(180, 8%, 52%, 0.548);
   margin-bottom: 50px;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
+
+.filter-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+
 
 .filters-container {
   display: flex;
@@ -22,12 +30,23 @@
   padding: 5px;
 }
 
-/* .x:hover{
-    cursor: pointer;
-    background-color: hsl(180, 14%, 20%);
-    color:white;
-    border-radius: 5px;
-} */
+.clear-button{
+    border:none;
+    outline: none;
+    background:none;
+    padding:0 5px;
+}
+
+.clear-button:hover{
+    background: none;
+    border: none;
+    outline: none;
+    color:hsl(180, 39%, 40%);
+}
+
+.clear-button:focus{
+    outline: none;
+}
 
 .x {
   width: 100%;
