@@ -1,8 +1,6 @@
 import React from 'react';
 
 const FilterLists = (props) =>{
-
-
     return (
       <div >
         <ul>
