@@ -1,0 +1,132 @@
+/* - Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%) */
+
+.job-container {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 15px;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 7px 10px 0 hsla(180, 8%, 52%, 0.548);
+}
+
+.img-and-jobs-container{
+  display:flex;
+  flex-flow:row nowrap;
+  
+}
+
+
+
+.job-info-container {
+  text-align: left;
+  margin: auto 25px;
+}
+
+
+
+.job-title-and-company {
+  padding: 10px 0;
+}
+
+.job-postedAt-information {
+  display: inline-block;
+  display: flex;
+}
+
+.company-title{
+  color: hsl(180, 39%, 40%);
+  font-weight: 600;
+}
+
+.job-position{
+  color:hsl(180, 14%, 20%);
+  font-weight:bold;
+  
+}
+
+.job-position:hover{
+  cursor: pointer;
+  color: hsl(180, 39%, 40%);
+}
+
+.info-data {
+  padding-right: 10px;
+  font-size: 12px;
+  color: hsl(180, 8%, 52%);
+}
+
+.filter-tablets-container {
+  display: flex;
+  flex-flow:row wrap;
+  margin:auto 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto 0;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color:hsl(180, 93%, 33%);
+    color:white;
+}
+
+li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom:10px;
+  background-color: hsl(180, 29%, 50%, 0.1);
+  color: hsl(180, 39%, 40%);
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+@media only screen and (max-width:850px){
+  .job-container{
+    flex-flow:column nowrap;
+    
+  }
+
+  .img-and-jobs-container{
+    display:flex;
+    flex-flow:column nowrap;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    border-bottom: solid 1px hsla(180, 14%, 20%, 0.425); 
+  }
+
+  .filter-tablets-container{
+    justify-content:space-between;
+    
+  }
+
+  .job-img-container{
+    width:15%;
+  } 
+
+  .job-info-container{
+    margin: 0;
+  }
+
+  .job-title-and-company{
+    padding:15px 0;
+  }
+
+  .logo{
+    float:left;
+    width:100%;
+    margin-top:-35px;
+  }
+}
