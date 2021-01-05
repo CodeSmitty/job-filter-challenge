@@ -13,6 +13,13 @@
   }
 }
 
+.filter-home{
+    width:80%;
+    position: relative;
+    margin:0 auto;
+    top:175px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
