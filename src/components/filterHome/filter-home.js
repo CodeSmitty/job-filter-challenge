@@ -2,7 +2,7 @@ import React from "react";
 import JobComponent from "../jobs/JobComponent";
 import useInputValues from "../../utility/data.reduce";
 import TagSearchBar from "../tagSearchBar/tagSearchBar";
-import "./filter-home.css";
+
 
 const Filter = () => {
   const [isFilter, clicked, filteredArrays, tags, deleteFilters] = useInputValues();
