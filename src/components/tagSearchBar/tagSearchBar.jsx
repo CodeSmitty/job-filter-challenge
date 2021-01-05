@@ -1,5 +1,6 @@
 import React from 'react';
 import "./tagSearchBar.css";
+import deleteLogo from "../../images/icon-remove.svg"
 
 const TagSearchBar = ({filters, handleDeleteFilters}) =>{
 
@@ -10,9 +11,9 @@ return (
     {filters.map((tag) => (
       <div className="filters-container">
         <div className="filters">{tag}</div>
-        <span onClick={() => handleDeleteFilters(tag)} className="x">
-          X
-        </span>
+        <button onClick={() => handleDeleteFilters(tag)} className="x">
+          <img className="remove-icon" src={deleteLogo} />
+        </button>
       </div>
     ))}
   </div>

@@ -3,11 +3,11 @@ import React from 'react';
 const FilterLists = (props) =>{
     return (
       <div >
-        <ul>
-          <li id={props.id} onClick={props.clicked}>
+        <div className="filter-list">
+          <button className="filter-item"  onClick={props.clicked}>
             {props.children}
-          </li>
-        </ul>
+          </button>
+        </div>
       </div> 
     );
 };

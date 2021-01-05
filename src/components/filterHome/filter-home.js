@@ -7,8 +7,12 @@ import TagSearchBar from "../tagSearchBar/tagSearchBar";
 const Filter = () => {
   const [isFilter, clicked, filteredArrays, tags, deleteFilters] = useInputValues();
 
-  const jobs = filteredArrays?.map((job) => {
-    return <JobComponent key={job.id} handleClick={clicked} jobData={job} />;
+  const jobs = filteredArrays?.map((job, i) => {
+      
+
+   
+
+    return <JobComponent index={i} key={job.id} handleClick={clicked} jobData={job} />;
   });
 
   return (
