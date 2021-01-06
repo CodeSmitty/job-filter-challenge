@@ -37,14 +37,14 @@ const JobComponent = ({ jobData, handleClick, index }) => {
             >
               <p className="company-title">{jobData.company}</p>
               {jobData.new ? (
-                <span className="newJob">
+                <div className="newJob">
                   <p>New!</p>{" "}
-                </span>
+                </div>
               ) : null}
               {jobData.featured ? (
-                <span className="featuredJob">
+                <div className="featuredJob">
                   <p>Featured</p>
-                </span>
+                </div>
               ) : null}
             </span>
           </div>
