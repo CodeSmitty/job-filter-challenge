@@ -2,7 +2,7 @@ import React from "react";
 import "./tagSearchBar.css";
 import deleteLogo from "../../images/icon-remove.svg";
 
-const TagSearchBar = ({ filters, handleDeleteFilters }) => {
+const TagSearchBar = ({ filters, handleDeleteFilters, handleClearFilters }) => {
   return (
     <div className="tag-search-container">
       <div className="filter-wrapper">
@@ -19,7 +19,7 @@ const TagSearchBar = ({ filters, handleDeleteFilters }) => {
           </div>
         ))}
       </div>
-      <button className="clear-button">clear</button>
+      <button onClick={handleClearFilters} value="clear-btn" className="clear-button">clear</button>
     </div>
   );
 };

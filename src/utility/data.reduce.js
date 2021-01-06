@@ -66,6 +66,13 @@ const useInputValues = () => {
     setTags(deletedFilter);
   };
 
+  const handleClear = () =>{
+    setTags([]) 
+    console.log('hola')
+    setGetFilteredResults(jobs)
+  }
+
+ 
   function clicked(tag) {
     const inputValues = tag;
 
@@ -76,7 +83,7 @@ const useInputValues = () => {
     getPropertyValues(jobs, inputValues);
   }
 
-  return [isFilterActive, clicked, getFilteredResults, tags, deleteFilters];
+  return [isFilterActive, clicked, getFilteredResults, tags, deleteFilters, handleClear];
 };
 
 export default useInputValues;
