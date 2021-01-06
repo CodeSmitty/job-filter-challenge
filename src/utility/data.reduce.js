@@ -13,28 +13,28 @@ const useInputValues = () => {
     })();
   }, [jobs]);
 
-  function getPropertyValues(myObject, inputValue) {
+  function getPropertyValues(inputValue) {
     let jobProperty = [];
 
     jobs.filter((job) => {
       for (let key in job) {
         const jobKeys = job[key];
-
-        if (jobKeys === inputValue) {
-          jobProperty.push(job);
-          setGetFilteredResults(jobProperty);
-        }
         if (typeof jobKeys === "object") {
           if (jobKeys.includes(inputValue)) {
             jobProperty.push(job);
             setGetFilteredResults(jobProperty);
           }
         }
+        if (jobKeys === inputValue) {
+          console.log(job)
+          jobProperty.push(job);
+          setGetFilteredResults(jobProperty);
+        }
       }
+      console.log(jobProperty);
 
       return jobProperty;
     });
-
     // !tags.includes(inputValue) && setTags([...tags, inputValue]);
 
     setIsFilterActive(true);
@@ -55,6 +55,7 @@ const useInputValues = () => {
       }
 
       if (jobProperty.length > 0) {
+        console.log(jobProperty)
         setGetFilteredResults(jobProperty);
       } else {
         setGetFilteredResults(jobs);
@@ -66,13 +67,12 @@ const useInputValues = () => {
     setTags(deletedFilter);
   };
 
-  const handleClear = () =>{
-    setTags([]) 
-    console.log('hola')
-    setGetFilteredResults(jobs)
-  }
+  const handleClear = () => {
+    setTags([]);
+    console.log("hola");
+    setGetFilteredResults(jobs);
+  };
 
- 
   function clicked(tag) {
     const inputValues = tag;
 
@@ -80,10 +80,19 @@ const useInputValues = () => {
 
     setTags([...tags, inputValues]);
 
-    getPropertyValues(jobs, inputValues);
+    getPropertyValues(inputValues);
   }
 
-  return [isFilterActive, clicked, getFilteredResults, tags, deleteFilters, handleClear];
+  console.log(tags)
+
+  return [
+    isFilterActive,
+    clicked,
+    getFilteredResults,
+    tags,
+    deleteFilters,
+    handleClear,
+  ];
 };
 
 export default useInputValues;
