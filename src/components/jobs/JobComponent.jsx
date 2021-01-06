@@ -30,7 +30,7 @@ const JobComponent = ({ jobData, handleClick, index }) => {
         </div>
         <div className="job-info-container">
           <div className="job-title-and-company">
-            <span
+            <div
               className={
                 jobData.featured || jobData.new ? "featured-or-new" : null
               }
@@ -46,7 +46,7 @@ const JobComponent = ({ jobData, handleClick, index }) => {
                   <p>Featured</p>
                 </div>
               ) : null}
-            </span>
+            </div>
           </div>
           <h4 className="job-position">{jobData.position}</h4>
           <div className="job-postedAt-information">
